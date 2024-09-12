@@ -1,0 +1,7 @@
+<svg width="200" height="50" xmlns="http://www.w3.org/2000/svg">
+  <path d="M10 25 Q 50 10, 100 25 T 190 25" fill="none" stroke="blue" stroke-width="5"/>
+  <circle cx="10" cy="25" r="10" fill="blue"/> <!-- Head -->
+  <circle cx="8" cy="23" r="2" fill="white"/> <!-- Left eye -->
+  <circle cx="12" cy="23" r="2" fill="white"/> <!-- Right eye -->
+</svg>
+

@@ -1,0 +1,187 @@
+/* General Body and Text Styles */
+body {
+    background-image: url("yb.png");
+    background-size: cover;
+    background-attachment: fixed;
+    background-color: #f0f0f0;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    overflow: hidden;
+}
+
+/* Section Styling */
+.section {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    margin: 0 auto;
+}
+
+/* Name, Title, and Paragraph Styling with Animations */
+#name {
+    font-family: 'Lucida Sans', sans-serif;
+    font-size: 6rem;
+    font-weight: bolder;
+    color: #ffd343;
+    margin-bottom: 0.5rem;
+    animation: fadeInDown 1s ease forwards;
+    opacity: 0;
+}
+
+#title {
+    font-family: 'Lucida Sans', sans-serif;
+    font-size: 3rem;
+    font-weight: bold;
+    color: #3475a7;
+    margin-bottom: 1.5rem;
+    animation: fadeInUp 1.5s ease forwards;
+    opacity: 0;
+    animation-delay: 1s; /* Delays the title animation */
+}
+
+.intro-paragraph {
+    font-family: 'Lucida Sans', sans-serif;
+    font-size: 1.4rem;
+    color: #ffffff;
+    line-height: 1.3;
+    margin-bottom: 1rem;
+    animation: fadeInUnique 2s ease forwards;
+    opacity: 0;
+    animation-delay: 2s; /* Delays the paragraph animation */
+}
+
+/* Python Logo Styling */
+.python_logo {
+    max-width: 100%;
+    height: auto;
+    max-height: 150px;
+}
+
+/* Fade-in animations */
+@keyframes fadeInDown {
+    0% {
+        opacity: 0;
+        transform: translateY(-50px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes fadeInUp {
+    0% {
+        opacity: 0;
+        transform: translateY(50px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes fadeInUnique {
+    0% {
+        opacity: 0;
+        transform: scale(0.8);
+    }
+    100% {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+/* Bottom Navigation Styling */
+.bottom-nav {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    padding: 15px 0;
+    z-index: 999;
+}
+
+.bottom-nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: space-around;
+    padding: 0;
+    margin: 0;
+}
+
+.bottom-nav ul li {
+    position: relative;
+    text-align: center;
+}
+
+.bottom-nav ul li a {
+    color: #fff;
+    text-decoration: none;
+    padding: 10px;
+    display: inline-block;
+    transition: all 0.3s ease;
+    border-radius: 5px;
+}
+
+.bottom-nav ul li a:hover {
+    background-color: #3475a7;
+    color: #ffd343;
+}
+
+.bottom-nav ul li a img {
+    width: 40px;
+    transition: transform 0.3s ease;
+}
+
+.bottom-nav ul li a:hover img {
+    transform: scale(1.2);
+}
+
+/* Hover Effect to Show Text */
+.bottom-nav ul li a::after {
+    content: attr(alt);
+    position: absolute;
+    bottom: -30px;
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: 0.9rem;
+    color: #ffd343;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.bottom-nav ul li a:hover::after {
+    opacity: 1;
+}
+
+/* Hover Effect - Show Text on Hover */
+.bottom-nav ul li a::before {
+    content: attr(alt);
+    position: absolute;
+    bottom: -25px;
+    left: 50%;
+    transform: translateX(-50%);
+    color: #ffd343;
+    font-size: 14px;
+    white-space: nowrap;
+    opacity: 0;
+    transition: opacity 0.4s ease-in-out;
+}
+
+.bottom-nav ul li a:hover::before {
+    opacity: 1;
+}
+
+/* Bottom Nav Borders */
+.bottom-nav ul li a {
+    border: 2px solid #3475a7;
+}
+
+.bottom-nav ul li a:hover {
+    border-color: #3475a7;
+}
